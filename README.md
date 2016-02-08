@@ -1,2 +1,2 @@
 # Travel-app
-An app mock-up for tourists
+A mocked-up app for tourists
