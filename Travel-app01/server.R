@@ -2,7 +2,6 @@
 # Travel-app01
 # server.R
 
-
 library(shiny)
 
 shinyServer(function(input, output) {

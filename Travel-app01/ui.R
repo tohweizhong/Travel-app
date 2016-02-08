@@ -27,7 +27,6 @@ shinyUI(fluidPage(
         uiOutput("selectMartialStatus")
     ),
 
-    # Show a plot of the generated distribution
     mainPanel(
         uiOutput("JoinNow")
     )

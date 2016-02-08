@@ -2,7 +2,6 @@ name: Travel-app04
 account: weiztoh
 server: shinyapps.io
 appId: 82147
-bundleId: 367277
-url:
-    https://weiztoh.shinyapps.io/Travel-app04/
-when: 1454740815.07568
+bundleId: 368274
+url: https://weiztoh.shinyapps.io/Travel-app04/
+when: 1454918974.62761

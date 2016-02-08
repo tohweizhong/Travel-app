@@ -18,8 +18,11 @@ shinyUI(fluidPage(
         uiOutput("selectDay")
     ),
 
-    # Show a plot of the generated distribution
     mainPanel(
+        uiOutput("selectLocations"),
+        uiOutput("ViewFNB"),
+        uiOutput("DontLikeReco"),
+        uiOutput("CreateOwn")
     )
   )
 ))
