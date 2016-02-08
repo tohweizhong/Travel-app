@@ -22,15 +22,17 @@ shinyUI(fluidPage(
                                            "Vivo City" = "Vivo City",
                                            "Haji Lane" = "Haji Lane",
                                            "River Safari" = "River Safari",
-                                           "Orchard Road" = "Orchard Road"))
+                                           "Orchard Road" = "Orchard Road"),
+                               selected = "Gardens By The Bay")
         ),
         
-        # Show a plot of the generated distribution
         mainPanel(
             leafletOutput("showMap"),
-            uiOutput("ViewItinReco")
+            uiOutput("ViewItinReco"),
             
-            tags$br()
+            tags$br(),
+            uiOutput("DontLikeReco"),
+            uiOutput("CreateOwn")
         )
     )
 ))

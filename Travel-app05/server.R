@@ -1,9 +1,6 @@
 
-# This is the server logic for a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
+# Travel-app05
+# server.R
 
 library(shiny)
 
@@ -39,7 +36,7 @@ shinyServer(function(input, output){
     
     # Add to itinerary
     output$AddToItin <- reactive({
-        htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app06><img border="0" src = "https://avatars3.githubusercontent.com/u/8409155?v=3&s=460" alt="HTML tutorial" style="width:100px;height:100px"></a>'
+        htmlCode <- '<a href = https://tohweizhong.shinyapps.io/Travel-app06><img border="0" src = "https://raw.githubusercontent.com/tohweizhong/Travel-app/master/images/Add%20To%20My%20Itinerary_button.png" alt="HTML tutorial" style="width:140px;height:50px"></a>'
         htmlCode
     })
     

@@ -1,9 +1,6 @@
 
-# This is the user-interface definition of a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
+# Travel-app05
+# ui.R
 
 library(shiny)
 
@@ -40,7 +37,7 @@ shinyUI(fluidPage(
                actionButton("_promo_s121", "View promotion"),
                
                uiOutput("s122"),
-               tags$h6("sumptuous all-day breakfast"),
+               tags$h6("Sumptuous all-day breakfast"),
                tags$h6("Rating: 4/5"),
                actionButton("_promo_s122", "View promotion"),
                

@@ -1,9 +1,6 @@
 
-# This is the server logic for a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
+# Travel-app02
+# server.R
 
 library(shiny)
 
@@ -26,7 +23,8 @@ shinyServer(function(input, output){
                                    "3 days" = "3 days",
                                    "4 days" = "4 days",
                                    "5 days" = "5 days",
-                                   "More than 5 days" = "More than 5 days"))
+                                   "More than 5 days" = "More than 5 days"),
+                       selected = "3 days")
     })
     
     output$selectPurpose <- renderUI({
@@ -53,7 +51,7 @@ shinyServer(function(input, output){
     # View recommendations
     output$ViewReco <- reactive({
         # image needs to be online
-        htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app03><img border="0" src = "https://avatars3.githubusercontent.com/u/8409155?v=3&s=460" alt="HTML tutorial" style="width:100px;height:100px"></a>'
+        htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app03><img border="0" src = "https://raw.githubusercontent.com/tohweizhong/Travel-app/master/images/View%20My%20Reco_button.png" alt="HTML tutorial" style="width:140px;height:50px"></a>'
         htmlCode
     })
     

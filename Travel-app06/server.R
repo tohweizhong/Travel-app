@@ -1,23 +1,31 @@
 
-# This is the server logic for a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
+# Travel-app06
+# server.R
 
 library(shiny)
 
 shinyServer(function(input, output) {
-
-  output$distPlot <- renderPlot({
-
-    # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2]
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
-
-  })
+    
+    # show map
+    output$showMap <- renderLeaflet({
+        
+        m <- leaflet() %>%
+            addTiles() %>%
+            addMarkers(lng = 103.8306849, lat =  1.30608, popup = "Wild Honey at Scotts Square")
+        print(m)
+    })
+    
+    # Book Now
+    output$BookNow <- reactive({
+        htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app06><img border="0" src = "https://raw.githubusercontent.com/tohweizhong/Travel-app/master/images/book%20now_button.png" alt="HTML tutorial" style="width:140px;height:50px"></a>'
+        htmlCode
+    })
+    
+    # Itinerary review
+    output$ItinReview <- reactive({
+        # image needs to be online
+        htmlCode <- '<a href = https://tohweizhong.shinyapps.io/Travel-app07><img border="0" src = "https://raw.githubusercontent.com/tohweizhong/Travel-app/master/images/next%20button.png" alt="HTML tutorial" style="width:120px;height:50px"></a>'
+        htmlCode
+    })
 
 })
