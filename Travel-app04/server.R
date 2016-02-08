@@ -9,8 +9,7 @@ shinyServer(function(input, output) {
     output$selectItin <- renderUI({
         selectizeInput("_whichItin", "",
                        choices = c("Itinerary 1" = "Itinerary 1",
-                                   "Itinerary 2" = "Itinerary 2",
-                                   "Itinerary 3" = "Itinerary 3"))
+                                   "Itinerary 2" = "Itinerary 2"))
     })
 
     output$selectDay <- renderUI({
@@ -31,6 +30,7 @@ shinyServer(function(input, output) {
         else if(input$"_whichDay" == "Day 3"){
             choices <- c("Singapore Flyer", "Science Centre", "Botanic Gardens")
         }
+        
         
         checkboxGroupInput("_whichLocations", "", choices = choices)
     })

@@ -9,21 +9,13 @@ shinyServer(function(input, output){
         
         idx <- which(df$loc == input$"_loc")
         
-#         if(length(idx) == 0){
-#             m <- leaflet() %>%
-#                 addTiles()
-#             print(m)
-#             
-#         }
-#         else if(length(idx) != 0){
-            
-            m <- leaflet() %>%
-                addTiles() %>%
-                addMarkers(lng = df$lng[idx], lat = df$lat[idx], popup = input$"_loc")
-            print(m)
-        #}
+        
+        m <- leaflet() %>%
+            addTiles() %>%
+            addMarkers(lng = df$lng[idx], lat = df$lat[idx], popup = input$"_loc")
+        print(m)
     })
-    
+
     output$ViewItinReco <- reactive({
         # image needs to be online
         htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app04><img border="0" src = "https://avatars3.githubusercontent.com/u/8409155?v=3&s=460" alt="HTML tutorial" style="width:100px;height:100px"></a>'
