@@ -29,7 +29,7 @@ shinyServer(function(input, output) {
     # Join now button
     output$JoinNow <- reactive({
         # image needs to be online
-        htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app02><img border="0" src = "https://raw.githubusercontent.com/tohweizhong/Travel-app/master/images/next%20button.png" alt="HTML tutorial" style="width:100px;height:50px"></a>'
+        htmlCode <- '<a href = https://weiztoh.shinyapps.io/Travel-app02><img border="0" src = "https://raw.githubusercontent.com/tohweizhong/Travel-app/master/images/next%20button.png" target="_top" style="width:100px;height:50px"></a>'
         htmlCode
     })
 

@@ -6,6 +6,8 @@ library(shiny)
 
 shinyUI(fluidPage(
     
+    tags$head(tags$meta("name" = "apple-mobile-web-app-capable", "content" = "yes")),
+    
     # Application title
     titlePanel("YourSingapore Guide"),
     
